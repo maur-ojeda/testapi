@@ -5,25 +5,39 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, viewport-fit=cover">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Saval Gestión de activo fijo</title>
+
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
 		<link rel="stylesheet" href="css/main.min.css">
-		<link
-		rel="stylesheet" href="css/saval.icons.css">
-		<!--link rel="stylesheet" href="css/style.css"-->
+		<link rel="stylesheet" href="">
+
+
+		<link rel="stylesheet" href="css/saval.icons.css">
 		<link rel="stylesheet" href="css/parts.css">
+
+
 		<link rel="stylesheet" href="js/libs/plugins/mdtoast.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
 		<link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
-		<link rel="manifest" href="manifest.json">
+
+		<link
+		rel="manifest" href="manifest.json">
+
 		<!-- Android -->
-		<meta name="theme-color" content="#3498db">
+		<meta
+		name="theme-color" content="#3498db">
+
 		<!-- IOS -->
 		<meta name="apple-mobile-web-app-capable" content="yes">
+
+
 		<link rel="apple-touch-icon" href="img/icons/icon-192x192.png">
 		<link rel="apple-touch-icon" sizes="152x152" href="img/icons/icon-152x152.png">
 		<link rel="apple-touch-icon" sizes="180x180" href="img/icons/icon-192x192.png">
 		<link
 		rel="apple-touch-icon" sizes="167x167" href="img/icons/icon-152x152.png">
+
 		<!-- iPhone X (1125px x 2436px) -->
 		<link
 		rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="img/icons-ios/apple-launch-1125x2436.png">
@@ -43,48 +57,42 @@
 	</head>
 	<body>
 
-<div class="fluid-container">
- 
-<div class="container">
-<div class="text-center">
-	<img src="img/logoSaval.png" alt="">
-	<h3>Gestión de Activo Fijo</h3>
-</div>
+		<div
+			class="fluid-container">
+			<!--header-->
+			<nav id="headerSaval" class="navbar navbar-light bg-light fixed-top">
+				<a class="navbar-brand" href="#">
+					<img class="img-fluid" src="img/logoSavalHeader.png" alt="">
+					<span class="h3">Gestión de Activo Fijo</span>
+				</a>
+			</nav>
+			<!--header-->
 
-<div class="mt-5 mb-5">
-	<div class="form-group">
-		<label for="">Usuario</label>
-		<input type="text" class="form-control" name="" id="">
-	</div>
-	<div class="form-group">
-		<label for="">Contraseña</label>
-		<input type="text" class="form-control" name="" id="">
-	</div>
-</div>
 
-<button type="button" name="" id="" class="btn btn-lg btn-block btn-primary">Ingresar</button>
-<a href="home.html">home</a>
+			<div id="savalFixedAssets" class="container mt-5 pt-5">
+				<h1>create Asset</h1>
+			</div>
 
-<div class="row mt-3">
-	<div class="col">
-		<div class="form-check">
-			<label class="form-check-label">
-				<input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" checked>
-				Recordar contraseña
-			</label>
+
+			<!--footer-->
+			<nav id="footerSaval" class="nav nav-tabs nav-stacked fixed-bottom justify-content-center">
+				<a class="nav-link text-center text-secondary" href="/">
+					<i class="sl-icon icon-ico-inicio"></i>
+					<br/>Inicio</a>
+				<a class="nav-link text-center text-secondary" href="/user">
+					<i class="sl-icon icon-ico-user"></i>
+					<br/>
+					Usuario
+				</a>
+				<a class="nav-link text-center text-secondary" href="/fixedAssets">
+					<i class="sl-icon sl-icon icon-ico-af"></i>
+					<br/>
+					Activo Fijo</a>
+			</nav>
+			<!--footer-->
+
+
 		</div>
-	</div>
-	<div class="col">
-		<a [routerLink]="['/login']">¿Olvidó su contraseña?</a>
-	</div>
-
-</div>
-</div>
-
-
-</div>
-
-
 
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

@@ -8,21 +8,18 @@ const STATIC_CACHE = 'static-v1';
 const DYNAMIC_CACHE = 'dynamic-v1';
 const INMUTABLE_CACHE = 'inmutable-v1';
 
-
+//lo cargado mas rapido
 const APP_SHELL = [
     '/',
     'index.html',
     'css/saval.icons.css',
     'css/parts.css',
     'css/main.min.css',
-    'css/main-fix.min.css',
     'css/saval.icons.css',
     'img/favicon.ico',
     'img/logoSavalHeader.png',
     'img/logoBlanco.svg',
     'img/logoSavalHeader.svg',
-
-
     'img/avatars/hulk.jpg',
     'img/avatars/ironman.jpg',
     'img/avatars/spiderman.jpg',
@@ -31,7 +28,7 @@ const APP_SHELL = [
     'js/app.js',
     'js/sw-utils.js'
 ];
-
+//lo que nunca se cambia
 const APP_SHELL_INMUTABLE = [
     'https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap',
     'https://fonts.googleapis.com/css2?family=PT+Sans&display=swap',
@@ -53,8 +50,6 @@ self.addEventListener('install', e => {
 
     const cacheInmutable = caches.open(INMUTABLE_CACHE).then(cache =>
         cache.addAll(APP_SHELL_INMUTABLE));
-
-
 
     e.waitUntil(Promise.all([cacheStatic, cacheInmutable]));
 
@@ -91,12 +86,9 @@ self.addEventListener('fetch', e => {
 
     let respuesta;
 
-    //cambiar por url de api
+    //cambiar por url de api real
     if (e.request.url.includes('/api')) {
-
-
         respuesta = manejoApiMensajes(DYNAMIC_CACHE, e.request)
-
     } else {
 
 

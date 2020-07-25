@@ -2,16 +2,15 @@ var url = window.location.href;
 var swLocation = '/twittor/sw.js';
 var apiUrl = "api";
 
+
 if (navigator.serviceWorker) {
-
-
     if (url.includes('localhost')) {
         swLocation = '/sw.js';
     }
-
-
     navigator.serviceWorker.register(swLocation);
 }
+
+
 
 
 
@@ -38,11 +37,6 @@ var usuario;
 // =====  muestra usuario
 function muestraUsuarioHtml(nombre, apellido) {
     $('#userName').html(nombre + ' ' + apellido);
-
-    $('#userData').click(function() {
-        document.location = '/paginados.html';
-        //ir user data
-    });
 }
 
 /*TODO: leer listado*/
@@ -310,15 +304,16 @@ function CallWebAPI() {
         var token = user + ":" + password;
         // Should i be encoding this value????? does it matter???
         // Base64 Encoding -> btoa
-        var hash = btoa(token);
-        return "Basic " + hash;
+        //var hash = btoa(token);
+        return "Basic " + token;
     }
 
 
     // New XMLHTTPRequest
     var request = new XMLHttpRequest();
-    request.open("POST", "https://afsaval.agenciasur.cl/webservice/rest/ping", false);
-    request.setRequestHeader("Authorization", authenticateUser(userName, passWord));
+    request.open("GET", " https://afsaval.agenciasur.cl/webservice/rest/ping", false);
+    //request.setRequestHeader("Authorization", authenticateUser(userName, passWord));
+    request.setRequestHeader("Authorization", "basic" + userName, passWord);
     request.send();
     // view request status
     alert(request.status);

@@ -9,10 +9,10 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 
 		<link rel="stylesheet" href="css/main.min.css">
-		<link rel="stylesheet" href="css/main-fix.css">
-		<link
-		rel="stylesheet" href="css/saval.icons.css">
-		<!--link rel="stylesheet" href="css/style.css"-->
+		<link rel="stylesheet" href="">
+
+
+		<link rel="stylesheet" href="css/saval.icons.css">
 		<link rel="stylesheet" href="css/parts.css">
 
 
@@ -57,159 +57,39 @@
 	</head>
 	<body>
 
-		<div class="fluid-container">
+		<div
+			class="fluid-container">
+			<!--header-->
 			<nav id="headerSaval" class="navbar navbar-light bg-light fixed-top">
 				<a class="navbar-brand" href="#">
 					<img class="img-fluid" src="img/logoSavalHeader.png" alt="">
 					<span class="h3">Gestión de Activo Fijo</span>
 				</a>
 			</nav>
+			<!--header-->
 
 
-
-
-
-
-<div id="savalFixedAssets" class="container mt-5 pt-5">
-	<div class="row">
-		<div class="col input-group mb-3 mt-3">
-					<input type="text" class="form-control" placeholder="Buscar activo fijo">
-					<div class="input-group-append">
-						<button class="btn btn-outline-primary" type="button" id="" [routerLink]="['/fixedAsset']">
-							<i class="fas fa-search"></i>
-							Buscar</button>
-					</div>
-				</div>
-		
-	</div>
-
-	<div class="row">
-		<div class="col">
-			<div class="card" [routerLink]="['/fixedAssetCreate']">
-				<div class="card-body text-center">
-					<h3 class="card-title text-primary">
-						<i class="sl-icon sl-icon icon-ico-af"></i>
-					</h3>
-					<p class="card-text">Crear activo fijo</p>
-				</div>
-			</div>
-		</div>
-		<div class="col">
-			<div class="card" [routerLink]="['/fixedAssetUpdate']">
-				<div class="card-body text-center">
-					<h3 class="card-title text-primary">
-						<i class="icon-ico-modificar"></i>
-					</h3>
-					<p class="card-text">modificar activo fijo</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="row mt-5">
-		<div class="col">
-			<div class="card" [routerLink]="['/fixedAssetMove']">
-				<div class="card-body text-center">
-					<h3 class="card-title text-primary">
-						<i class="icon-ico-trasladar"></i>
-					</h3>
-					<p class="card-text">trasladar activo fijo</p>
-				</div>
-			</div>
-		</div>
-		<div class="col">
-			<div class="card" [routerLink]="['/fixedAssetDelete']">
-				<div class="card-body text-center">
-					<h3 class="card-title text-primary">
-						<i class="icon-ico-eliminar"></i>
-					</h3>
-					<p class="card-text">dar de baja activo fijo</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-	<div class="innerContent card mt-5">
-		<div class="row card-body">
-			
-
-			<div class="col-12 mt-3">
-				<h3>Activos fijos en proceso</h3>
-
-
-				<table id="fixedAssetsProcess" class="table table-responsive-sm table-hover">
-					<thead>
-						<tr title="Tooltip on top">
-							<th scope="col"></th>
-							<th scope="col">Id</th>
-							<th scope="col">Nº solicitud</th>
-							<th scope="col">Solicitante</th>
-							<th scope="col">Fecha de solicitud</th>
-							<th scope="col">Nombre AF</th>
-							<th scope="col">Especie</th>
-							<th scope="col">Estado</th>
-							<th scope="col"></th>
-						</tr>
-					</thead>
-					<tbody>
-						
-						<tr>
-							<td>
-
-								<i class="fas fa-info-circle text-warning" data-toggle="tooltip" data-placement="top" title="En revisión"></i>
-
-							</td>
-							<td>Column content</td>
-							<td>Column content</td>
-							<td>Column content</td>
-							<td>Column content</td>
-							<td>Column content</td>
-							<td>Column content</td>
-							<td>Column content</td>
-							<td>
-
-								<a name="" id="" class="btn btn-primary btn-sm" [routerLink]="['/fixedAssetPending']"role="button">Revisar</a>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-
+			<div id="savalFixedAssets" class="container mt-5 pt-5">
+				<h1>update Asset</h1>
 			</div>
 
-		</div>
 
-
-	</div>
-
-
-</div>
-
-
-
-
-
-
-
-
+			<!--footer-->
 			<nav id="footerSaval" class="nav nav-tabs nav-stacked fixed-bottom justify-content-center">
-
 				<a class="nav-link text-center text-secondary" href="/">
 					<i class="sl-icon icon-ico-inicio"></i>
 					<br/>Inicio</a>
-
 				<a class="nav-link text-center text-secondary" href="/user">
 					<i class="sl-icon icon-ico-user"></i>
 					<br/>
 					Usuario
 				</a>
-
 				<a class="nav-link text-center text-secondary" href="/fixedAssets">
 					<i class="sl-icon sl-icon icon-ico-af"></i>
 					<br/>
 					Activo Fijo</a>
-
 			</nav>
+			<!--footer-->
 
 
 		</div>
