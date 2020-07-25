@@ -299,10 +299,12 @@ isOnline();
 function CallWebAPI() {
     var userName = "mobile_user";
     var passWord = "testing";
+    var url = "https://afsaval.agenciasur.cl/webservice/rest/requests";
+    //var url = "https://afsaval.agenciasur.cl/webservice/rest/ping"
 
     function authenticateUser(user, password) {
         var token = user + ":" + password;
-        // Should i be encoding this value????? does it matter???
+
         // Base64 Encoding -> btoa
         //var hash = btoa(token);
         return "Basic " + token;
@@ -311,9 +313,11 @@ function CallWebAPI() {
 
     // New XMLHTTPRequest
     var request = new XMLHttpRequest();
-    request.open("GET", " https://afsaval.agenciasur.cl/webservice/rest/ping", false);
-    //request.setRequestHeader("Authorization", authenticateUser(userName, passWord));
-    request.setRequestHeader("Authorization", "basic" + userName, passWord);
+
+    request.open("GET", url, false);
+
+    request.setRequestHeader("Authorization", authenticateUser(userName, passWord));
+
     request.send();
     // view request status
     alert(request.status);
