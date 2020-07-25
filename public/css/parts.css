@@ -1,0 +1,50 @@
+#headerSaval {
+    -webkit-box-shadow: 0 2px 24px 0 rgba(155, 174, 188, 0.3);
+    box-shadow: 0 2px 24px 0 rgba(155, 174, 188, 0.3);
+    background: #FFFFFF !important;
+}
+
+#footerSaval {
+    background: #FFFFFF;
+    -webkit-box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+#homeSaval {
+    margin-bottom: 100px;
+}
+
+#homeSaval .card {
+    text-align: center;
+    padding-top: 24px;
+}
+
+#homeSaval .card i {
+    font-size: 24px;
+    color: #0047cc;
+}
+
+#homeSaval .card .card-body h4 {
+    font-weight: 900;
+    font-size: 14px;
+    color: #2f4858;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+#homeSaval .card .card-body p {
+    font-size: 14px;
+    color: #5f788a;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 20px;
+}
+
+#savalFixedAssets .card-text {
+    text-transform: uppercase;
+    color: #2F4858;
+    font-size: 14px;
+    font-weight: bold
+}
